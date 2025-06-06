@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Daniel\\Disertatie\\Projects\\webApp\\SkyProject\\SkyProject.csproj": {}
+    "C:\\Users\\Daniel\\Disertatie\\Projects\\webApp\\Skyproject\\SkyProject.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Daniel\\Disertatie\\Projects\\webApp\\SkyProject\\SkyProject.csproj": {
+    "C:\\Users\\Daniel\\Disertatie\\Projects\\webApp\\Skyproject\\SkyProject.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Daniel\\Disertatie\\Projects\\webApp\\SkyProject\\SkyProject.csproj",
+        "projectUniqueName": "C:\\Users\\Daniel\\Disertatie\\Projects\\webApp\\Skyproject\\SkyProject.csproj",
         "projectName": "SkyProject",
-        "projectPath": "C:\\Users\\Daniel\\Disertatie\\Projects\\webApp\\SkyProject\\SkyProject.csproj",
+        "projectPath": "C:\\Users\\Daniel\\Disertatie\\Projects\\webApp\\Skyproject\\SkyProject.csproj",
         "packagesPath": "C:\\Users\\Daniel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Daniel\\Disertatie\\Projects\\webApp\\SkyProject\\obj\\",
+        "outputPath": "C:\\Users\\Daniel\\Disertatie\\Projects\\webApp\\Skyproject\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Daniel\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,28 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.EntityFrameworkCore.sqlite": {
+              "target": "Package",
+              "version": "[9.0.5, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
