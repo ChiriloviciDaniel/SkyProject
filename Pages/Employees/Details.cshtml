@@ -1,0 +1,42 @@
+@page
+@model SkyProject.Pages_Employees.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div class="row border border-2 p-3">
+    <h1>Employee Details</h1>
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Employee.Firstname)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Employee.Firstname)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Employee.LastName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Employee.LastName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Employee.CreateDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Employee.CreateDate.ToShortDateString()
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Employee.Role)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Employee.Role)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Employee.ExitDate)
+        </dt>
+        <dd class="col-sm-10">
+            @Model.Employee.ExitDate?.ToShortDateString()
+        </dd>
+    </dl>
+</div>
