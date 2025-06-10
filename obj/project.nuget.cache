@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yJ1yXqpEhw8=",
+  "dgSpecHash": "qLM7kH5u9KM=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Daniel\\Disertatie\\Projects\\webApp\\Skyproject\\SkyProject.csproj",
+  "projectFilePath": "C:\\Users\\Daniel\\Disertatie\\Projects\\webApp\\SkyProject\\SkyProject.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Daniel\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\Daniel\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",

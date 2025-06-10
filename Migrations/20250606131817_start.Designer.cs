@@ -11,7 +11,7 @@ namespace SkyProject.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20250606131817_start")]
-    partial class start
+    partial class Start
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
