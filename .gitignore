@@ -1,0 +1,25 @@
+# Build folders
+/bin/
+/obj/
+*.nuget.cache
+
+# Visual Studio / Rider / IDE specific
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Nu salva fișiere de configurare locale
+.vscode/
+.idea/
+
+# Alte fișiere generate automat
+*.log
+*.cache
+*.pdb
+*.exe
+*.dll
+*.json
+
+# Fișiere temporare
+*.tmp
