@@ -1,25 +1,28 @@
-# Build folders
-/bin/
-/obj/
-*.nuget.cache
+# Build directories
+**/bin/
+**/obj/
 
-# Visual Studio / Rider / IDE specific
+# NuGet
+*.nupkg
+*.nuspec
+*.nuget.cache
+packages/
+
+# Visual Studio / Rider
+.vscode/
+.idea/
 *.user
 *.suo
 *.userosscache
 *.sln.docstates
 
-# Nu salva fișiere de configurare locale
-.vscode/
-.idea/
-
-# Alte fișiere generate automat
-*.log
-*.cache
-*.pdb
-*.exe
+# Build results
 *.dll
-*.json
-
-# Fișiere temporare
+*.exe
+*.pdb
+*.cache
+*.log
 *.tmp
+
+# Fișiere JSON generate automat (dar nu cele din config)
+*.sourcelink.json
