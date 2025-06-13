@@ -5,6 +5,7 @@ namespace SkyProject.Data;
 
 public class Employee
 {
+    [Display(Name = "Id")]
     public int Id { get; set; }
 
     [Display(Name = "First Name")]

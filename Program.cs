@@ -1,17 +1,22 @@
 using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Options;
 using SkyProject.Data;
+using SkyProject.Interfaces;
+using SkyProject.Services;
+using SkyProject.Utils;
 
 var builder = WebApplication.CreateBuilder(args);
+
+GlobalizationUtils.ConfigureCurrentCulture();
 
 // Add services to the container.
 builder.Services.AddRazorPages();
 
-var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")  
+var connectionString = builder.Configuration.GetConnectionString("DefaultConnection")
     ?? throw new InvalidOperationException("Connection string not found");
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlite(connectionString)); //(options => options.UseSqlite(@"Data Source=C:\\Users\\Daniel\\Disertatie\\Projects\\webApp\\Skyproject\\skyproject.db"));
 
+builder.Services.AddScoped<IEmployeeService, EmployeeService>();
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
