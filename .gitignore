@@ -1,6 +1,19 @@
-# Folders to ignore
+# Build directories
 **/bin/
 **/obj/
+
+# NuGet
+*.nupkg
+*.nuspec
+*.nuget.cache
+packages/
+
+# Visual Studio / Rider
+.vscode/
+.idea/
+*.user
+*.userosscache
+*.sln.docstates
 
 # Build results
 *.dll
@@ -9,19 +22,6 @@
 *.cache
 *.log
 *.tmp
-*.bak
 
-# NuGet
-*.nupkg
-*.nuspec
-packages/
-project.lock.json
-project.fragment.lock.json
-
-# Rider / VS Code / Visual Studio
-.vscode/
-.idea/
-*.suo
-*.user
-*.userosscache
-*.sln.docstates
+# Fișiere JSON generate automat (dar nu cele din config)
+*.sourcelink.json
