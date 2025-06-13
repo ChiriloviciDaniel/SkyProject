@@ -1,61 +1,66 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
 using SkyProject.Data;
+using SkyProject.Exceptions;
+using SkyProject.Interfaces;
 
 namespace SkyProject.Pages_Employees
 {
     public class DeleteModel : PageModel
     {
-        private readonly SkyProject.Data.AppDbContext _context;
+        private readonly IEmployeeService _employeeService;
 
-        public DeleteModel(SkyProject.Data.AppDbContext context)
+        public DeleteModel(IEmployeeService employeeService)
         {
-            _context = context;
+            _employeeService = employeeService;
         }
 
         [BindProperty]
         public Employee Employee { get; set; } = default!;
 
-        public async Task<IActionResult> OnGetAsync(int? id)
+        public IActionResult OnGet(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
-
-            var employee = await _context.Employees.FirstOrDefaultAsync(m => m.Id == id);
-
-            if (employee is not null)
+            try
             {
-                Employee = employee;
-
-                return Page();
+                Employee = _employeeService.getById(id.Value);
             }
-
-            return NotFound();
+            catch (EmployeeNotFoundExceptionException)
+            {
+                return NotFound();
+            }
+            catch (Exception)
+            {
+                return RedirectToPage("../Error");
+            }
+            return Page();
         }
 
-        public async Task<IActionResult> OnPostAsync(int? id)
+        public IActionResult OnPost(int? id)
         {
             if (id == null)
             {
                 return NotFound();
             }
-
-            var employee = await _context.Employees.FindAsync(id);
-            if (employee != null)
+            try
             {
-                Employee = employee;
-                _context.Employees.Remove(Employee);
-                await _context.SaveChangesAsync();
+                _employeeService.Delete(id.Value);
+            }
+            catch (EmployeeNotFoundExceptionException)
+            {
+                return NotFound();
+            }
+            catch (Exception)
+            {
+                return RedirectToPage("../Error");
             }
 
-            return RedirectToPage("./Index");
+
+            return RedirectToPage("../Index");
         }
     }
 }
