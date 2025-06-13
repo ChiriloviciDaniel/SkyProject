@@ -1,25 +1,27 @@
-# Build folders
-/bin/
-/obj/
-*.nuget.cache
+# Folders to ignore
+**/bin/
+**/obj/
 
-# Visual Studio / Rider / IDE specific
-*.user
-*.suo
-*.userosscache
-*.sln.docstates
+# Build results
+*.dll
+*.exe
+*.pdb
+*.cache
+*.log
+*.tmp
+*.bak
 
-# Nu salva fișiere de configurare locale
+# NuGet
+*.nupkg
+*.nuspec
+packages/
+project.lock.json
+project.fragment.lock.json
+
+# Rider / VS Code / Visual Studio
 .vscode/
 .idea/
-
-# Alte fișiere generate automat
-*.log
-*.cache
-*.pdb
-*.exe
-*.dll
-*.json
-
-# Fișiere temporare
-*.tmp
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
