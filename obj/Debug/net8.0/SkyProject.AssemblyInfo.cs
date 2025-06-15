@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SkyProject")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+369a199281dc3f8709be3b144f92cf8c1e904bf7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f30882de2ef948331f8bec83d5f1dd75da9af795")]
 [assembly: System.Reflection.AssemblyProductAttribute("SkyProject")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SkyProject")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

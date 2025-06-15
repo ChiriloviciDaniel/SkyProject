@@ -23,6 +23,11 @@
                 <span asp-validation-for="Employee.LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
+                <label asp-for="Employee.Description" class="control-label"></label>
+                <input asp-for="Employee.Description" class="form-control" />
+                <span asp-validation-for="Employee.Description" class="text-danger"></span>
+            </div>
+            <div class="form-group">
                 <label asp-for="Employee.CreateDate" class="control-label"></label>
                 <input asp-for="Employee.CreateDate" type="date" class="form-control" />
                 <span asp-validation-for="Employee.CreateDate" class="text-danger"></span>

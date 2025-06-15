@@ -18,4 +18,8 @@ public class Employee
     [Display(Name = "Exit Date")]
     public DateTime? ExitDate { get; set; }
 
+    //Add a new column
+    [Display(Name = "Description")]
+    public string? Description { get; set; }
+
 }
