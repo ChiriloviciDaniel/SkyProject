@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.EntityFrameworkCore;
+using NuGet.Protocol.Plugins;
 using SkyProject.Data;
 using SkyProject.Interfaces;
 
@@ -19,17 +20,18 @@ namespace SkyProject.Pages_Employees
         {
             _employeeService = employeeService;
         }
-        //private readonly AppDbContext _context;
-        /*
-                public IndexModel(Data.AppDbContext context)
-                {
-                    _context = context;
-                }*/
 
         public IList<Employee> Employees { get; set; } = default!;
 
+        [BindProperty(SupportsGet = true)]
+        public string? SearchString { get; set; }
         public void OnGet()
         {
+            if (!string.IsNullOrWhiteSpace(SearchString))
+            {
+                Employees = _employeeService.SearchByName(SearchString).ToList();
+                return;
+            }
             Employees = _employeeService.GetAll().ToList();
             //Employees = await _context.Employees.ToListAsync();
         }

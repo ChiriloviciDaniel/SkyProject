@@ -48,6 +48,14 @@ public class EmployeeService : IEmployeeService
     {
         return _context.Employees;
     }
+    public IEnumerable<Employee> SearchByName(string name)
+    {
+        name = name.ToLower();
+        return _context.Employees.
+        Where(e =>
+        (e.Firstname != null && e.Firstname.ToLower().Contains(name)) ||
+        (e.LastName != null && e.LastName.ToLower().Contains(name)));
+    }
 
     public void Update(Employee employee)
     {
